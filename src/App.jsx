@@ -56,35 +56,75 @@ function Navbar() {
 /* ================= MAIN CONTENT ================= */
 
 function MainContent() {
-  
-  let equityReports= [
-     {
-    id: 1,
-    name: "Titan",
-    date: "1 Sep,2025",
-    link: "https://drive.google.com/file/d/1kJdz70Qy9UvkgMPNdzseUv0UJ8IXYs69/view",
-  },
-  ]
-  let  ipoReports = [
-     {
-    id: 3,
-    name: "KSH International",
-    date: "16 Dec,2025",
-    link: "https://drive.google.com/file/d/1PvtVIC5bssx1ULTVxztkCc3x2Qwl3-ZG/view",
-  },
+
+  let equityReports = [
     {
-    id: 2,
-    name: "Park Medi",
-    date: "10 Dec,2025",
-    link: "https://drive.google.com/file/d/1rFyjaGRhPB-xggpadbOwqn8bzq9faqB8/view",
-  },
-     {
-    id: 1,
-    name: "Meeso",
-    date: "03 Dec,2025",
-    link: "https://drive.google.com/file/d/10H3O-0s4FaNUl2Xv1Oy12B5QGnyzis9-/view",
-  },]
-  let valuationReports = []
+      id: 1,
+      name: "Titan",
+      date: "1 Sep,2025",
+      link: "https://drive.google.com/file/d/1kJdz70Qy9UvkgMPNdzseUv0UJ8IXYs69/view",
+    },
+  ]
+
+  let ipoReports = [
+    {
+      id: 5,
+      name: "Shadowfax Ltd",
+      date: "20 Jan,2026",
+      link: "http://drive.google.com/file/d/1n8mBEMFuOilD59TSlqIiCaigbMUraYmo/view",
+    },
+    {
+      id: 4,
+      name: "BCCL Ltd",
+      date: "09 Jan,2026",
+      link: "https://drive.google.com/file/d/1Eq6qjEISin5Lh2tC26Edw1otZBI4abRf/view",
+    },
+    {
+      id: 3,
+      name: "KSH International",
+      date: "16 Dec,2025",
+      link: "https://drive.google.com/file/d/1PvtVIC5bssx1ULTVxztkCc3x2Qwl3-ZG/view",
+    },
+    {
+      id: 2,
+      name: "Park Medi",
+      date: "10 Dec,2025",
+      link: "https://drive.google.com/file/d/1rFyjaGRhPB-xggpadbOwqn8bzq9faqB8/view",
+    },
+    {
+      id: 1,
+      name: "Meeso",
+      date: "03 Dec,2025",
+      link: "https://drive.google.com/file/d/10H3O-0s4FaNUl2Xv1Oy12B5QGnyzis9-/view",
+    },]
+
+
+  let FinanacialModaling = [
+    {
+      id: 1,
+      name: "Infosys",
+      date: "15 Jan,2026",
+      link: "https://drive.google.com/file/d/1l7hDuSxDug5hSs27b_auYXIYORBKHxRi/view"
+    },
+    {
+      id: 3,
+      name: "TCS",
+      date: "10 Feb,2026",
+      link: "https://drive.google.com/file/d/1zJ1HbjrAb1Q2n2wRM6KWbpYzSjOAqQpp/view",
+    },
+    {
+      id: 2,
+      name: "SRF Ltd",
+      date: "20 Jan,2026",
+      link: "https://drive.google.com/file/d/1G063f2p9QYdKNq60_dph7mTuLXSCtQvC/view"
+    },
+    {
+      id: 1,
+      name: "Apollo Tyres",
+      date: "05 Jan,2026",
+      link: "https://drive.google.com/file/d/1x3WpVpIYe9G1kzO9j57-Hy2QwKbFatfV/view",
+    },
+  ]
 
   return (
     <main className="pt-20">
@@ -124,9 +164,9 @@ function MainContent() {
         </h2>
 
         <div className="grid gap-8 md:grid-cols-3">
-          <ResearchCard title="Equity Research Reports"  reports={equityReports}/>
-          <ResearchCard title="Company Valuation Models"  reports={valuationReports}/>
-          <ResearchCard title="IPO Analysis (India)" reports={ipoReports}/>
+          <ResearchCard title="Equity Research Reports" reports={equityReports} />
+          <ResearchCard title="Company Valuation Models" reports={valuationReports} />
+          <ResearchCard title="IPO Analysis (India)" reports={ipoReports} />
         </div>
       </section>
 
@@ -140,7 +180,7 @@ function MainContent() {
           purposes only. I am not a SEBI-registered Research Analyst or
           Investment Advisor. All analysis is based on publicly available
           information and personal interpretation as a student and market
-          enthusiast.  
+          enthusiast.
           <br /><br />
           Nothing on this website constitutes investment advice. Readers are
           strongly encouraged to consult a SEBI-registered professional before
@@ -153,7 +193,7 @@ function MainContent() {
 
 /* ================= RESEARCH CARD ================= */
 
-function ResearchCard({ title , reports }) {
+function ResearchCard({ title, reports }) {
   return (
     <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 hover:border-teal-400 transition">
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
@@ -161,46 +201,46 @@ function ResearchCard({ title , reports }) {
         In-depth fundamental analysis backed by structured financial models and
         long-term thinking.
       </p> */}
-       <table className="w-full border-collapse text-sm">
-      <thead>
-        <tr className="border-b border-slate-700 text-gray-300">
-          <th className="text-left py-2 px-2 font-medium">Name</th>
-          <th className="text-left py-2 px-2 font-medium">Date</th>
-          <th className="text-center py-2 px-2 font-medium">Open</th>
-        </tr>
-      </thead>
+      <table className="w-full border-collapse text-sm">
+        <thead>
+          <tr className="border-b border-slate-700 text-gray-300">
+            <th className="text-left py-2 px-2 font-medium">Name</th>
+            <th className="text-left py-2 px-2 font-medium">Date</th>
+            <th className="text-center py-2 px-2 font-medium">Open</th>
+          </tr>
+        </thead>
 
-      <tbody>
+        <tbody>
 
-        {reports.length === 0 && (
-  <tr>
-    <td colSpan="3" className="py-4 text-center text-gray-500">
-      No reports available yet
-    </td>
-  </tr>
-)}
+          {reports.length === 0 && (
+            <tr>
+              <td colSpan="3" className="py-4 text-center text-gray-500">
+                No reports available yet
+              </td>
+            </tr>
+          )}
 
-{reports.map((report, index) => (
-    <tr
-      key={index}
-      className="border-b border-slate-800 hover:bg-slate-800 transition"
-    >
-      <td className="py-2 px-2">{report.name}</td>
-      <td className="py-2 px-2 text-gray-400">{report.date}</td>
-      <td className="py-2 px-2 text-center">
-        <a
-          href={report.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-teal-400 hover:text-teal-300 font-medium"
-        >
-          Click here
-        </a>
-      </td>
-    </tr>
-  ))}
+          {reports.map((report, index) => (
+            <tr
+              key={index}
+              className="border-b border-slate-800 hover:bg-slate-800 transition"
+            >
+              <td className="py-2 px-2">{report.name}</td>
+              <td className="py-2 px-2 text-gray-400">{report.date}</td>
+              <td className="py-2 px-2 text-center">
+                <a
+                  href={report.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-400 hover:text-teal-300 font-medium"
+                >
+                  Click here
+                </a>
+              </td>
+            </tr>
+          ))}
 
-        {/* <tr className="border-b border-slate-800 hover:bg-slate-800 transition">
+          {/* <tr className="border-b border-slate-800 hover:bg-slate-800 transition">
           <td className="py-2 px-2">TCS Equity Report</td>
           <td className="py-2 px-2 text-gray-400">12 Aug 2024</td>
           <td className="py-2 px-2 text-center">
@@ -238,8 +278,8 @@ function ResearchCard({ title , reports }) {
             </a>
           </td>
         </tr> */}
-      </tbody>
-    </table>
+        </tbody>
+      </table>
     </div>
   );
 }
@@ -255,10 +295,10 @@ function Footer() {
       <h2 className="text-2xl font-bold mb-8">Connect With Me</h2>
 
       <div className="flex justify-center gap-10 text-sm text-gray-300">
-       <a href="https://x.com/OrigoFin12102" target="_blank"> <span className="hover:text-teal-400 cursor-pointer">X</span> </a>
-       <a href="https://www.linkedin.com/in/vineet-kumar-singh001/" target="_blank"> <span className="hover:text-teal-400 cursor-pointer">LinkedIn</span> </a>
-       <a href="https://www.instagram.com/fin.origo/" target="_blank"> <span className="hover:text-teal-400 cursor-pointer">Instagram</span> </a> 
-       <a href="mailto:vineetcs001@gmail.com"> <span className="hover:text-teal-400 cursor-pointer">Email</span> </a>
+        <a href="https://x.com/OrigoFin12102" target="_blank"> <span className="hover:text-teal-400 cursor-pointer">X</span> </a>
+        <a href="https://www.linkedin.com/in/vineet-kumar-singh001/" target="_blank"> <span className="hover:text-teal-400 cursor-pointer">LinkedIn</span> </a>
+        <a href="https://www.instagram.com/fin.origo/" target="_blank"> <span className="hover:text-teal-400 cursor-pointer">Instagram</span> </a>
+        <a href="mailto:vineetcs001@gmail.com"> <span className="hover:text-teal-400 cursor-pointer">Email</span> </a>
       </div>
 
       <p className="mt-10 text-xs text-gray-500">
