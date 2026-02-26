@@ -68,6 +68,12 @@ function MainContent() {
 
   let ipoReports = [
     {
+      id: 6,
+      name: "PNGS Reva Ltd",
+      date: "20 Jan,2026",
+      link: "http://drive.google.com/file/d/1n8mBEMFuOilD59TSlqIiCaigbMUraYmo/view",
+    },
+    {
       id: 5,
       name: "Shadowfax Ltd",
       date: "20 Jan,2026",
@@ -101,7 +107,7 @@ function MainContent() {
 
   let FinanacialModaling = [
     {
-      id: 1,
+      id: 4,
       name: "Infosys",
       date: "15 Jan,2026",
       link: "https://drive.google.com/file/d/1l7hDuSxDug5hSs27b_auYXIYORBKHxRi/view"
@@ -127,7 +133,7 @@ function MainContent() {
   ]
 
   return (
-    <main className="pt-20">
+    <main className="">
       {/* HERO SECTION */}
       <section id="Home" className="relative h-screen w-full overflow-hidden">
         <video
@@ -165,7 +171,7 @@ function MainContent() {
 
         <div className="grid gap-8 md:grid-cols-3">
           <ResearchCard title="Equity Research Reports" reports={equityReports} />
-          <ResearchCard title="Company Valuation Models" reports={valuationReports} />
+          <ResearchCard title="Company Finanacial Models" reports={FinanacialModaling} />
           <ResearchCard title="IPO Analysis (India)" reports={ipoReports} />
         </div>
       </section>
@@ -239,45 +245,6 @@ function ResearchCard({ title, reports }) {
               </td>
             </tr>
           ))}
-
-          {/* <tr className="border-b border-slate-800 hover:bg-slate-800 transition">
-          <td className="py-2 px-2">TCS Equity Report</td>
-          <td className="py-2 px-2 text-gray-400">12 Aug 2024</td>
-          <td className="py-2 px-2 text-center">
-            <a
-              href="#"
-              className="text-teal-400 hover:text-teal-300 font-medium"
-            >
-              Click here
-            </a>
-          </td>
-        </tr>
-
-        <tr className="border-b border-slate-800 hover:bg-slate-800 transition">
-          <td className="py-2 px-2">Reliance Valuation</td>
-          <td className="py-2 px-2 text-gray-400">03 Sep 2024</td>
-          <td className="py-2 px-2 text-center">
-            <a
-              href="#"
-              className="text-teal-400 hover:text-teal-300 font-medium"
-            >
-              Click here
-            </a>
-          </td>
-        </tr>
-
-        <tr className="hover:bg-slate-800 transition">
-          <td className="py-2 px-2">IPO Analysis – Tata Tech</td>
-          <td className="py-2 px-2 text-gray-400">18 Oct 2024</td>
-          <td className="py-2 px-2 text-center">
-            <a
-              href="#"
-              className="text-teal-400 hover:text-teal-300 font-medium"
-            >
-              Click here
-            </a>
-          </td>
-        </tr> */}
         </tbody>
       </table>
     </div>
