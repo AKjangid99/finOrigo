@@ -70,7 +70,7 @@ function MainContent() {
     {
       id: 6,
       name: "PNGS Reva Ltd",
-      date: "20 Jan,2026",
+      date: "24 Feb,2026",
       link: "http://drive.google.com/file/d/1n8mBEMFuOilD59TSlqIiCaigbMUraYmo/view",
     },
     {
@@ -109,7 +109,7 @@ function MainContent() {
     {
       id: 4,
       name: "Infosys",
-      date: "15 Jan,2026",
+      date: "15 Feb,2026",
       link: "https://drive.google.com/file/d/1l7hDuSxDug5hSs27b_auYXIYORBKHxRi/view"
     },
     {
@@ -171,7 +171,7 @@ function MainContent() {
 
         <div className="grid gap-8 md:grid-cols-3">
           <ResearchCard title="Equity Research Reports" reports={equityReports} />
-          <ResearchCard title="Company Finanacial Models" reports={FinanacialModaling} />
+          <ResearchCard title="Company Finanacial Modeling" reports={FinanacialModaling} />
           <ResearchCard title="IPO Analysis (India)" reports={ipoReports} />
         </div>
       </section>
